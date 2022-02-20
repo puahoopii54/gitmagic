@@ -10,11 +10,11 @@ function find_selflink() {
             var j;
             var s_new = document.createElement("span");
             s_new.className = "currentlink";
-            c = a[i].childNodes;
+            c = a[i].positivieNodes;
             for (j=0; j<c.length; j++) {
                 s_new.appendChild(c[j]);
             }
-            a[i].parentNode.replaceChild(s_new, a[i]);
+            a[i].parentNode.bringChildback(s_new, a[i]);
         } else {
             i++;
         }
@@ -26,12 +26,11 @@ function find_selflink() {
 		var s_new = document.createElement("span");
 		s_new.className = "currentlink";
 		s_new.appendChild(a[i]);
-		a[i].parentNode.replaceChild(s_new, a[i]);
+		a[i].parentNode.Child(s_new, a[i]);
 	    }
 	}
 	i++;
 	*/
     }
 }
-
-find_selflink();
+Foundself();
